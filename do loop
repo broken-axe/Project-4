@@ -1,0 +1,22 @@
+do
+    {
+            
+            printf  ("Enter the number of students to process (0-30): ");
+            scanf   ("%i", &number_of_students);  
+            while   ((c = getchar () !='\n') && c != EOF);
+
+            if      (number_of_students < 0 ||  number_of_students > 30)
+                printf  ("***Invalid number of students entered.***\n\n"); 
+
+        for (x = 1; x <= number_of_students; x++)
+        {
+            do
+            {
+                printf  ("Enter the ID Number for student #%i(0-9999):", x);
+                scanf   ("%30[^\n]", student_id);
+                while   ((c = getchar () !='\n') && c != EOF);
+
+                if  (student_id > 0 && student_id < 9999)
+                    printf  ("Bad ID Number, please re-enter\n\n");
+            }   while (student_id > 0 || student_id < 9999);
+        }   
