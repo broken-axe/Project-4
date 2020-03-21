@@ -45,20 +45,20 @@ int main (void)
             scanf   ("%i", &number_of_students);  
             while   ((c = getchar () !='\n') && c != EOF);
 
-            if      (number_of_students <0 ||  number_of_students >30)
+            if      (number_of_students < 0 ||  number_of_students > 30)
                 printf  ("***Invalid number of students entered.***\n\n"); 
 
-        for (x = 1; x <= student_id; x++)
+        for (x = 1; x <= number_of_students; x++)
         {
             do
             {
                 printf  ("Enter the ID Number for student #%i(0-9999):", x);
-                scanf   ("%i", student_id);
+                scanf   ("%30[^\n]", student_id);
                 while   ((c = getchar () !='\n') && c != EOF);
 
-                if  (student_id < 0 && student_id > 9999)
+                if  (student_id > 0 || 9999 < student_id)
                     printf  ("Bad ID Number, please re-enter\n\n");
-            }   while (student_id < 0 && student_id > 9999);
+            }   while (student_id < 0 || student_id > 9999);
         }   
 
     }while (number_of_students >30);
