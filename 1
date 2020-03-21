@@ -55,11 +55,42 @@ int main (void)
             do
             {
                 printf  ("Enter the ID Number for student #%i(0-9999):", x);
-                scanf   ("%30[^\n]", student_id[x]);
+                scanf   ("%i", &student_id[x]);
                 while   ((c = getchar () !='\n') && c != EOF);
 
-                if  (student_id[x] > 0 || 9999 < student_id[x])
+                if  (student_id[x] < 0 || student_id[x] > 9999)
                     printf  ("Bad ID Number, please re-enter\n\n");
+
+                do
+                {
+                printf  ("Enter grade #1: ");
+                scanf   ("%i", &grade1);
+                while   ((c = getchar () !='\n') && c != EOF);
+
+                if  (grade1 < 0 || grade1 > 100)
+                    printf  ("*** Invalid entry. Grade must be from 0 to 100. ***\n\n");
+                }while  (grade1 < 0 || grade1 > 100);
+
+                do
+                {
+                printf  ("Enter grade #2: ");
+                scanf   ("%i", &grade2);
+                while   ((c = getchar () !='\n') && c != EOF);
+
+                if  (grade2 < 0 || grade2 > 100)
+                    printf  ("*** Invalid entry. Grade must be from 0 to 100. ***\n\n");
+                }while  (grade2 < 0 || grade2 > 100);
+
+                do
+                {
+                printf  ("Enter grade #3: ");
+                scanf   ("%i", &grade3);
+                while   ((c = getchar () !='\n') && c != EOF);
+
+                if  (grade3 < 0 || grade3 > 100)
+                    printf  ("*** Invalid entry. Grade must be from 0 to 100. ***\n\n");
+                }while  (grade3 < 0 || grade3 > 100);
+
             }   while (student_id[x] < 0 || student_id[x] > 9999);
         }
     
