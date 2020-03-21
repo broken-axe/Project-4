@@ -53,12 +53,12 @@ int main (void)
             do
             {
                 printf  ("Enter the ID Number for student #%i(0-9999):", x);
-                scanf   ("%30[^\n]", student_id[number_of_students]);
+                scanf   ("%30[^\n]", student_id[x]);
                 while   ((c = getchar () !='\n') && c != EOF);
 
-                if  (student_id[number_of_students] > 0 || 9999 < student_id[number_of_students])
+                if  (student_id[x] > 0 || 9999 < student_id[x])
                     printf  ("Bad ID Number, please re-enter\n\n");
-            }   while (student_id[number_of_students] < 0 || student_id[number_of_students] > 9999);
+            }   while (student_id[x] < 0 || student_id[x] > 9999);
         }   
 
     }while (number_of_students >30);
