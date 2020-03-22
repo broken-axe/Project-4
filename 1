@@ -96,18 +96,42 @@ int main (void)
                     printf  ("*** Invalid entry. Grade must be from 0 to 100. ***\n\n");
                 }while  (grade3 < 0 || grade3 > 100);
 
-                average[30] = grade1 + grade2 + grade3 / 3;
+                average[x] = (grade1 + grade2 + grade3) / 3;
             
             printf  ("\n");
  
            }   while (student_id[x] < 0 || student_id[x] > 9999);
 
-            printf  ("Grade Report for %s\n\n" ,school_name);
-            printf  ("ID No. %i\n" ,&student_id[x]);
+        }
 
+        
+        printf  ("Grade Report for %s\n\n" ,school_name);
+        printf ("ID No.\t   Avg.\t  Grade\n");
 
-
-
+        for (x = 1; x <= number_of_students; x++)
+        {
+            if  (average[x] < 0 && average[x] > 63 )
+                printf ("%d\t   %i\t    F\n", student_id[x], average[x]);
+            if    (average[x] < 64 && average[x] > 66 )
+                printf ("%d\t   %i\t    D\n", student_id[x], average[x]);
+            if    (average[x] < 67 && average[x] > 69 )
+                printf ("%d\t   %i\t    D+\n", student_id[x], average[x]);
+            if    (average[x] < 70 && average[x] > 73 )
+                printf ("%d\t   %i\t    C-\n", student_id[x], average[x]);
+            if    (average[x] < 74 && average[x] > 76 )
+                printf ("%d\t   %i\t    C\n", student_id[x], average[x]);
+            if    (average[x] < 77 && average[x] > 79 )
+                printf ("%d\t   %i\t    C+\n", student_id[x], average[x]);
+            if    (average[x] < 80 && average[x] > 83 )
+                printf ("%d\t   %i\t    B-\n", student_id[x], average[x]);
+            if    (average[x] < 84 && average[x] > 86 )
+                printf ("%d\t   %i\t    B\n", student_id[x], average[x]);
+            if    (average[x] < 87 && average[x] > 89 )
+                printf ("%d\t   %i\t    B+\n", student_id[x], average[x]);
+            if    (average[x] < 90 && average[x] > 93 )
+                printf ("%d\t   %i\t    A-\n", student_id[x], average[x]);
+            if    (average[x] < 94 && average[x] > 100 )
+                printf ("%d\t   %i\t    A+\n", student_id[x], average[x]);
         }
 
     getchar();  /* optional used for console apps */
