@@ -95,17 +95,22 @@ int main (void)
                 if  (grade3 < 0 || grade3 > 100)
                     printf  ("*** Invalid entry. Grade must be from 0 to 100. ***\n\n");
                 }while  (grade3 < 0 || grade3 > 100);
+
+                average[30] = grade1 + grade2 + grade3 / 3;
             
             printf  ("\n");
  
            }   while (student_id[x] < 0 || student_id[x] > 9999);
-        
-        }
-    
 
-    printf  ("Grade Report for %s\n\n" ,school_name);
-    printf  ("The average for student #1: %s", average);
+            printf  ("Grade Report for %s\n\n" ,school_name);
+
+                do
+                {
+                printf  ("ID No. %i\n" ,&student_id[x]);
+                }
+        }
 
     getchar();  /* optional used for console apps */
-    return 0;   /*end main*/a
+    return 0;   /*end main*/
+
 }
